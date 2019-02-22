@@ -22,10 +22,11 @@
 </div><!-- /.container -->
 <div id="particles-js"></div>
 <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>-->
+
+
 <style>
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
-
 body, html {
 	height: 100%;
 	background-repeat: no-repeat;    /*background-image: linear-gradient(rgb(12, 97, 33),rgb(104, 145, 162));*/
@@ -100,6 +101,71 @@ body, html {
   	position: fixed;
   	top: 0px;
   	z-index:1;
+}
+<!--
+.nice-input {
+  position: absolute;
+}-->
+
+<!--#login-box .form-control input {
+  align-items: center;
+  border:none;
+  border-radius:4px;
+  padding:30px 30px;
+  font-family: 'Lato', sans-serif;
+  font-size:14px;
+  box-shadow: rgba(0,0,0,.05) 0 5px 20px;
+  letter-spacing:0;
+  width:165px;
+  color: white;
+  font-weight:900;
+}-->
+
+<!--#login-box .controls label {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  letter-spacing:1px;
+  font-size:1px;
+}-->
+
+#login-box .controls span {
+  font-family: 'Lato', sans-serif;
+  font-size:14px;
+  font-weight:900;
+}
+
+#login-box .form-control {
+  animation: print .2s 1 ease-in-out;
+}
+
+.shake {
+  animation: shake .2s 1 ease-in-out;
+}
+
+@keyframes print {
+  from{
+  position:absolute;
+  transform: scale(50);
+  /* uncomment for freeze */  
+  /*   filter:blur(1px); */
+  }
+  99% {
+  position:absolute;
+  }
+  to {
+  position:relative;
+  }
+}
+
+@keyframes shake 
+{
+  from,
+  to {
+  }
+  50% {
+    transform:scale(0.97);
+  }
 }
 </style>
 <script>
@@ -223,77 +289,9 @@ $.getScript("https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles
     );
 
 });
-</script>
 
-<style>
-<!--
-.nice-input {
-  position: absolute;
-}-->
 
-<!--#login-box .form-control input {
-  align-items: center;
-  border:none;
-  border-radius:4px;
-  padding:30px 30px;
-  font-family: 'Lato', sans-serif;
-  font-size:14px;
-  box-shadow: rgba(0,0,0,.05) 0 5px 20px;
-  letter-spacing:0;
-  width:165px;
-  color: white;
-  font-weight:900;
-}-->
 
-<!--#login-box .controls label {
-  position: absolute;
-  top: 6px;
-  left: 10px;
-  letter-spacing:1px;
-  font-size:1px;
-}-->
-
-#login-box .controls span {
-  font-family: 'Lato', sans-serif;
-  font-size:14px;
-  font-weight:900;
-}
-
-#login-box .form-control {
-  animation: print .2s 1 ease-in-out;
-}
-
-.shake {
-  animation: shake .2s 1 ease-in-out;
-}
-
-@keyframes print {
-  from{
-  position:absolute;
-  transform: scale(50);
-  /* uncomment for freeze */  
-  /*   filter:blur(1px); */
-  }
-  99% {
-  position:absolute;
-  }
-  to {
-  position:relative;
-  }
-}
-
-@keyframes shake 
-{
-  from,
-  to {
-  }
-  50% {
-    transform:scale(0.97);
-  }
-}
-</style>
-
-<script>
 var app = new Vue({
   el: '.container',
   data: {
